@@ -39,9 +39,12 @@ It does not contain separate storage devices, however.
 That means that whether the directory also contains the data of your
 instances depends on the storage drivers that you use.
 
-> **If your Incus server uses any external storage
-> (for example, LVM volume groups, ZFS zpools, or any other resource that isn't
-> directly self-contained to Incus), you must back this up separately.**
+```Text
+{important}
+If your Incus server uses any external storage
+(for example, LVM volume groups, ZFS zpools, or any other resource that isn't
+directly self-contained to Incus), you must back this up separately.
+```
 
 To back up your data, create a tarball of `/var/lib/incus`.
 If your system uses `/etc/subuid` and `/etc/subgid` file, you
@@ -124,14 +127,14 @@ networks or profiles if the need arises.
 
 Use the following command to dump the content of the local database to a file:
 
-```
-    incus admin sql local .dump > <output_file>
+```bash
+incus admin sql local .dump > <output_file>
 ```
 
 Use the following command to dump the content of the global database to a file:
 
-```
-    incus admin sql global .dump > <output_file>
+```bash
+incus admin sql global .dump > <output_file>
 ```
 
 You should include these two commands in your regular Incus backup.
