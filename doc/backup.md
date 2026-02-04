@@ -1,3 +1,7 @@
+<!--
+[Online documentation:](https://linuxcontainers.org/incus/docs/main/backup/)
+-->
+
 (backups)=
 
 # How to back up an Incus server
@@ -39,8 +43,7 @@ It does not contain separate storage devices, however.
 That means that whether the directory also contains the data of your
 instances depends on the storage drivers that you use.
 
-```Text
-{important}
+```{important}
 If your Incus server uses any external storage
 (for example, LVM volume groups, ZFS zpools, or any other resource that isn't
 directly self-contained to Incus), you must back this up separately.
